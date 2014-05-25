@@ -1,0 +1,8 @@
+block('header').elem('title')(
+	content()(function() {
+		return {
+			tag: 'span',
+			content: 'ООО "ГОТЭЙ"'
+		};
+	})	
+)

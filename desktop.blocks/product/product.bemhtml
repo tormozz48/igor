@@ -1,0 +1,5 @@
+block('product')(
+	content()(function() {
+		return this.ctx.content.name;
+	})
+)

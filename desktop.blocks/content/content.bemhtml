@@ -1,0 +1,16 @@
+block('content')(
+	content().match(this.ctx.content)(function() {
+		var c = this.ctx.content;
+
+		return [
+			{
+				block: 'sticker',
+				content: c.sticker
+			},
+			{
+				block: 'products',
+				content: c.products
+			}
+		];
+	})
+)

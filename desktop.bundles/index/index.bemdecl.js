@@ -15,5 +15,8 @@ exports.blocks = [
     },
     {
         "name": "header"
+    },
+    {
+        "name": "content"
     }
 ];

@@ -1,0 +1,11 @@
+block('contacts')(
+	
+	content().match(this.ctx.content)(function() {
+		return this.ctx.content.map(function(item) {
+			return {
+				elem: 'item',
+				text: item	
+			};
+		});
+	})
+)

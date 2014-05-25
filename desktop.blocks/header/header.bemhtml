@@ -1,0 +1,15 @@
+block('header')(
+	content()(function() {
+		return [
+			{
+				elem: 'delivery'
+			},
+			{
+				elem: 'title'
+			},
+			{
+				elem: 'contacts'
+			}
+		];
+	})
+)

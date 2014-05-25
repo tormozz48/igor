@@ -1,0 +1,10 @@
+block('contacts').elem('item')(
+
+	def().match(!this.ctx.text)(function() {
+		return false;
+	}),
+
+	content().match(this.ctx.text)(function() {
+		return this.ctx.text;
+	})
+)
