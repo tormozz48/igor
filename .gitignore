@@ -1,0 +1,28 @@
+.DS_Store
+.idea
+.settings
+.project
+*.npmignore
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+node_modules
+npm-debug.log
+libs
+
+.bem/cache
+*.bundles/*/*
+!desktop.bundles/*/*.bemdecl.js
+!desktop.bundles/*/*.bemjson.js
+!touch-pad.bundles/*/*.bemdecl.js
+!touch-pad.bundles/*/*.bemjson.js
+!touch-phone.bundles/*/*.bemdecl.js
+!touch-phone.bundles/*/*.bemjson.js
+
