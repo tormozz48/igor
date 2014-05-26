@@ -9,12 +9,11 @@
     scripts: [{ elem: 'js', url: '_index.js' }],
     content: [
        {
-          block: 'header',
+          block: 'header'
        },
        {
           block: 'content',
           content: {
-            sticker: 'Наличный и безналичный расчет с НДС',
             products: {
               title: 'ООО "ГОТЭЙ" осуществляет регулярные поставки',
               items: [
@@ -26,7 +25,18 @@
                 {
                   name: 'Термоэтикетка',
                   image: null,
-                  tables: null
+                  tables: [
+                      {
+                          title: 'Термоэтикетка',
+                          items: [
+                              { name: '58х30 ЕСО', type: 'Fasson', amount: '60' },
+                              { name: '58х40 ЕСО', type: 'Fasson', amount: '60' },
+                              { name: '58х60 ЕСО', type: 'Fasson', amount: '60' },
+                              { name: '30х20 ЕСО', type: 'Fasson', amount: '56' },
+                              { name: '43х25 ЕСО', type: 'Fasson', amount: '75' },
+                          ]
+                      }
+                  ]
                 },
                 {
                   name: 'Бумага офисная А4 80г., бумага перфорированая ЛПУ, бумага рулонная, ролики для плоттеров и принтеров',
@@ -41,17 +51,17 @@
                     {
                       name: 'Лента полипропиленовая',
                       image: null,
-                      tables: null,
+                      tables: null
                     },
                     {
                       name: 'Стретч пленка пищевая',
                       image: null,
-                      tables: null,
+                      tables: null
                     },
                     {
                       name: 'Пленка термоусадочная ПВХ',
                       image: null,
-                      tables: null,
+                      tables: null
                     }
                   ]
                 }

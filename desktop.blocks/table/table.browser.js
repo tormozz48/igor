@@ -1,6 +1,6 @@
 /* global modules:false */
 
-modules.define('product', function(provide) {
+modules.define('table', function(provide) {
 
 provide();
 

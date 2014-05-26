@@ -1,7 +1,9 @@
 ({
     mustDeps: [],
     shouldDeps: [
-    	{ block: 'sticker' },
+        { elem: 'col', mods: { position: ['left', 'center']}},
+        { block: 'sticker' },
+        { block: 'contacts' },
     	{ block: 'products' }
     ]
 })

@@ -1,16 +1,45 @@
 block('content')(
 	content().match(this.ctx.content)(function() {
-		var c = this.ctx.content;
-
 		return [
-			{
-				block: 'sticker',
-				content: c.sticker
-			},
-			{
-				block: 'products',
-				content: c.products
-			}
+            {
+                elem: 'col',
+                mods: { position: 'left'},
+                content: [
+                    {
+                        block: 'sticker',
+                        title: 'Доставка',
+                        content: 'Доставка по Симферополю и городам Крыма'
+                    },
+                    {
+                        block: 'sticker',
+                        title: 'Расчет',
+                        content: 'Наличный и безналичный расчет с учетом НДС'
+                    },
+                    {
+                        block: 'sticker',
+                        title: 'Контакты',
+                        content: {
+                            block: 'contacts',
+                            content: [
+                                'Игорь 0957678717',
+                                'Александр 0950153100',
+                                'E-Mail CLL-GOTYE@mail.ru'
+                            ]
+                        }
+                    }
+
+                ]
+            },
+            {
+                elem: 'col',
+                mods: { position: 'center'},
+                content: [
+                    {
+                        block: 'products',
+                        content: this.ctx.content.products
+                    }
+                ]
+            }
 		];
 	})
 )

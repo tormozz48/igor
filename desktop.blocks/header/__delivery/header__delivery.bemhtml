@@ -1,9 +1,0 @@
-block('header').elem('delivery')(
-	content()(function() {
-		return {
-			tag: 'span',
-			content: 'доставка по Симферополю и другим городам Крыма'
-		};
-	})	
-)
-
