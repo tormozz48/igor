@@ -1,32 +1,22 @@
-block('table').elem('row')(
-
-    def().match(!this.ctx.content)(function() {
-        return false;
-    }),
-
-    tag()('tr'),
+block('table').elem('row').elemMod('head', 'yes')(
 
     content()(function() {
-        var c = this.ctx.content;
-        console.log(c);
         return [
             {
                 block: this.block,
                 elem: 'col',
-                content: c.name
+                content: 'Наименование'
             },
             {
                 block: this.block,
                 elem: 'col',
-                content: c.type
+                content: 'Тип сырья'
             },
             {
                 block: this.block,
                 elem: 'col',
-                content: c.amount
+                content: 'Количество в коробке'
             }
-        ]
+        ];
     })
-
-
 )

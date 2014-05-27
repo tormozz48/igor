@@ -1,1 +1,32 @@
-block('table')
+block('table')(
+
+    tag()('table'),
+
+    def().match(!this.ctx.content)(function() {
+        return false;
+    }),
+
+    content()(function() {
+        return this.ctx.content.items.map(function(item) {
+            return {
+                elem: 'row',
+                content: item
+            };
+        });
+    }),
+
+    content().match(this.ctx.content.items)(function() {
+        return [
+            {
+                elem: 'caption',
+                content: this.ctx.content.title
+            },
+            {
+                elem: 'row',
+                elemMods: { head: 'yes' },
+                content: []
+            },
+            applyNext()
+        ];
+    })
+)

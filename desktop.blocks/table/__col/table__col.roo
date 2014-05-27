@@ -1,0 +1,8 @@
+.table__col {
+    padding: 5px;
+
+    color: #444;
+
+    text-align: center;
+    border: 1px solid #008ace;
+}

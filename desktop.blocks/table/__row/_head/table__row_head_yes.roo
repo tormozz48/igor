@@ -1,0 +1,4 @@
+.table__row_head_yes {
+    background-color: #add8e6;
+    color: #333333;
+}

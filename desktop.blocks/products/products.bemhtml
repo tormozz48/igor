@@ -1,19 +1,20 @@
 block('products')(
-	
-	content().match(this.ctx.content)(function() {
-		var c = this.ctx.content,
-			buf = c.items.map(function(item) {
-				return {
-					block: 'product',
-					content: item
-				}
-			});
 
-		buf.unshift({
-			elem: 'title',
-			content: c.title
-		});
+    content().match(this.ctx.content)(function() {
+        var c = this.ctx.content,
+        buf = c.items.map(function(item) {
 
-		return buf;
-	})
+            return {
+                block: 'product',
+                content: item
+            }
+        });
+
+        buf.unshift({
+            elem: 'title',
+            content: c.title
+        });
+
+        return buf;
+    })
 )

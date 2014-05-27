@@ -1,1 +1,6 @@
-//block('product').elem('title')
+block('product').elem('title')(
+
+    def().match(!this.ctx.content)(function() {
+        return false;
+    })
+)

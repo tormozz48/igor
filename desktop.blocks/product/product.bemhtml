@@ -1,15 +1,29 @@
 block('product')(
 
-	content().match(this.ctx.tables)(function() {
-		var buf = this.ctx.tables.map(function(item) {
-		    return {
-		        elem: 'table',
-		        content: item
-		    }
-		});
+    content().match(this.ctx.content.tables)(function() {
+        return this.ctx.content.tables.map(function(item) {
+            return {
+                elem: 'table',
+                content: item
+            };
+        });
+    }),
 
-		buf.unshift({ elem: 'title', content: this.ctx.name });
+    content().match(this.ctx.content.name)(function(){
+        return [
+            {
+                elem: 'title',
+                content: this.ctx.content.name
+            },
+            applyNext()
+        ];
+    }),
 
-		return buf;
-	})
+    content().match(!this.ctx.content.name)(function() {
+        return false;
+    }),
+
+    content().match(!this.ctx.content)(function() {
+        return false;
+    })
 )
