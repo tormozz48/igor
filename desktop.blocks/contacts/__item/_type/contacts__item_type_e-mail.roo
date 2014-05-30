@@ -1,0 +1,4 @@
+.contacts__item_type_e-mail > .contacts__value {
+    float: right;
+    margin-right: 30px;
+}

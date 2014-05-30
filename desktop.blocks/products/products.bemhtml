@@ -1,20 +1,39 @@
 block('products')(
 
+    def().match(!this.ctx.content)(function() {
+        return false;
+    }),
+
+    content()(function() {
+        return this.ctx.content.items.map(function(item, index) {
+            return [
+                {
+                    block: 'anchor',
+                    content: {
+                        tag: 'a',
+                        attrs: { name: index }
+                    }
+                },
+                {
+                    block: 'product',
+                    index: index,
+                    content: item
+                }
+            ]
+        });
+    }),
+
     content().match(this.ctx.content)(function() {
-        var c = this.ctx.content,
-        buf = c.items.map(function(item) {
-
-            return {
-                block: 'product',
-                content: item
-            }
-        });
-
-        buf.unshift({
-            elem: 'title',
-            content: c.title
-        });
-
-        return buf;
+        return [
+            {
+                elem: 'title',
+                content: this.ctx.content.title
+            },
+            {
+                elem: 'menu',
+                content: this.ctx.content
+            },
+            applyNext()
+        ]
     })
 )

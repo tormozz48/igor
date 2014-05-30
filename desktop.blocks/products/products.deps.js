@@ -2,6 +2,9 @@
     mustDeps: [],
     shouldDeps: [
     	{ elem: 'title' },
-    	{ block: 'product'}
+        { elem: 'menu' },
+    	{ block: 'product'},
+        { block: 'menu'},
+        { block: 'link'}
     ]
 })

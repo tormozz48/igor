@@ -14,6 +14,16 @@
        {
           block: 'content',
           content: {
+            stickers: {
+                delivery: {
+                    title: 'Доставка',
+                    content: 'Доставка по Симферополю и городам Крыма'
+                },
+                payment: {
+                    title: 'Расчет',
+                    content: 'Наличный и безналичный расчет с учетом НДС'
+                }
+            },
             products: {
               title: 'ООО "ГОТЭЙ" осуществляет регулярные поставки',
               items: [

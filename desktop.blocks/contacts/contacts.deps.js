@@ -1,6 +1,8 @@
 ({
     mustDeps: [],
     shouldDeps: [
-    	{ elem: 'item' }
+    	{ elem: 'item', mods: {type: ['e-mail', 'phone']} },
+        { elem: 'label' },
+        { elem: 'value' }
     ]
 })

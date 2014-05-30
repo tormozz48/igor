@@ -1,5 +1,6 @@
 block('content')(
 	content().match(this.ctx.content)(function() {
+		var c = this.ctx.content;
 		return [
             {
                 elem: 'col',
@@ -11,9 +12,21 @@ block('content')(
                         content: {
                             block: 'contacts',
                             content: [
-                                'Игорь 0957678717',
-                                'Александр 0950153100',
-                                'E-Mail CLL-GOTYE@mail.ru'
+                                {
+                                    label: 'Игорь',
+                                    type: 'phone',
+                                    value: '0957678717'
+                                },
+                                {
+                                    label: 'Александр',
+                                    type: 'phone',
+                                    value: '0950153100'
+                                },
+                                {
+                                    label: 'e-mail',
+                                    type: 'e-mail',
+                                    value: 'CLL-GOTYE@mail.ru'
+                                }
                             ]
                         }
                     }
@@ -25,13 +38,13 @@ block('content')(
                 content: [
                     {
                         block: 'sticker',
-                        title: 'Доставка',
-                        content: 'Доставка по Симферополю и городам Крыма'
+                        title: c.stickers.delivery.title,
+                        content: c.stickers.delivery.content
                     },
                     {
                         block: 'sticker',
-                        title: 'Расчет',
-                        content: 'Наличный и безналичный расчет с учетом НДС'
+                        title: c.stickers.payment.title,
+                        content: c.stickers.payment.content
                     }
                 ]
             },

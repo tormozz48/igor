@@ -1,0 +1,14 @@
+block('contacts').elem('label')(
+
+    tag()('span'),
+
+    content()(function() {
+        return [
+            applyNext(),
+            {
+                tag: 'span',
+                content: ':'
+            }
+        ]
+    })
+)

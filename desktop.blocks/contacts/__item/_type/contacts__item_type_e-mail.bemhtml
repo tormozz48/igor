@@ -1,0 +1,9 @@
+block('contacts').elem('item').elemMod('type', 'e-mail')(
+
+    tag()('div'),
+
+    elem('value').content()(function() {
+        return 'mailto:' + this.ctx.content;
+    })
+
+)

@@ -1,0 +1,10 @@
+.contacts__item_type_phone > .contacts__label {
+
+}
+
+.contacts__item_type_phone > .contacts__value {
+    float: right;
+    margin-right: 30px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}

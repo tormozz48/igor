@@ -1,29 +1,29 @@
 block('product')(
 
     content().match(this.ctx.content.tables)(function() {
+        var index = this.ctx.index;
         return this.ctx.content.tables.map(function(item) {
-            return {
-                elem: 'table',
-                content: item
-            };
+            return [
+                {
+                    elem: 'table',
+                    content: item
+                }
+            ];
         });
     }),
 
-    content().match(this.ctx.content.name)(function(){
+    content()(function(){
         return [
             {
                 elem: 'title',
+                index: this.ctx.index,
                 content: this.ctx.content.name
             },
             applyNext()
         ];
     }),
 
-    content().match(!this.ctx.content.name)(function() {
-        return false;
-    }),
-
-    content().match(!this.ctx.content)(function() {
+    content().match(!this.ctx.content).match(!this.ctx.content.name)(function() {
         return false;
     })
 )
