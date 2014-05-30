@@ -3,18 +3,8 @@ block('content')(
 		return [
             {
                 elem: 'col',
-                mods: { position: 'left'},
+                mods: { position: 'right' },
                 content: [
-                    {
-                        block: 'sticker',
-                        title: 'Доставка',
-                        content: 'Доставка по Симферополю и городам Крыма'
-                    },
-                    {
-                        block: 'sticker',
-                        title: 'Расчет',
-                        content: 'Наличный и безналичный расчет с учетом НДС'
-                    },
                     {
                         block: 'sticker',
                         title: 'Контакты',
@@ -27,12 +17,27 @@ block('content')(
                             ]
                         }
                     }
-
                 ]
             },
             {
                 elem: 'col',
-                mods: { position: 'center'},
+                mods: { position: 'left' },
+                content: [
+                    {
+                        block: 'sticker',
+                        title: 'Доставка',
+                        content: 'Доставка по Симферополю и городам Крыма'
+                    },
+                    {
+                        block: 'sticker',
+                        title: 'Расчет',
+                        content: 'Наличный и безналичный расчет с учетом НДС'
+                    }
+                ]
+            },
+            {
+                elem: 'col',
+                mods: { position: 'center' },
                 content: [
                     {
                         block: 'products',

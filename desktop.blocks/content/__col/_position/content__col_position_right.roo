@@ -1,0 +1,7 @@
+.content__col_position_right {
+    position: fixed;
+    width: 250px;
+    float: right;
+    right: 0;
+    margin-right: 15px;
+}
