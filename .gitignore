@@ -19,6 +19,8 @@ libs
 
 .bem/cache
 *.bundles/*/*
+!desktop.bundles/*/images
+!desktop.bundles/*/icons
 !desktop.bundles/*/*.bemdecl.js
 !desktop.bundles/*/*.bemjson.js
 !touch-pad.bundles/*/*.bemdecl.js
