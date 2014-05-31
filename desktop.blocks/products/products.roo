@@ -1,4 +1,6 @@
 .products {
+
+    width: 750px;
     margin-bottom: 10px;
 }
 

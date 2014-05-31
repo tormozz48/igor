@@ -1,6 +1,7 @@
 ({
     mustDeps: [],
     shouldDeps: [
-    	{ elem: 'title' }
+    	{ elem: 'title' },
+        { elem: 'contacts'}
     ]
 })

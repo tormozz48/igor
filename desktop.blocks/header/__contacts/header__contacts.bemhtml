@@ -1,0 +1,27 @@
+block('header').elem('contacts')(
+
+    content()(function() {
+        return [
+            {
+                block: 'contacts',
+                content: [
+                    {
+                        label: 'Игорь',
+                        type: 'phone',
+                        value: '0957678717'
+                    },
+                    {
+                        label: 'Александр',
+                        type: 'phone',
+                        value: '0950153100'
+                    },
+                    {
+                        label: 'e-mail',
+                        type: 'e-mail',
+                        value: 'CLL-GOTYE@mail.ru'
+                    }
+                ]
+            }
+        ]
+    })
+)

@@ -1,9 +1,11 @@
 block('contacts').elem('item').elemMod('type', 'e-mail')(
 
-    tag()('div'),
-
     elem('value').content()(function() {
-        return 'mailto:' + this.ctx.content;
+        return {
+            block: 'link',
+            url: 'mailto:' + this.ctx.content,
+            content: this.ctx.content
+        };
     })
 
 )

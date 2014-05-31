@@ -4,46 +4,18 @@ block('content')(
 		return [
             {
                 elem: 'col',
-                mods: { position: 'right' },
-                content: [
-                    {
-                        block: 'sticker',
-                        title: 'Контакты',
-                        content: {
-                            block: 'contacts',
-                            content: [
-                                {
-                                    label: 'Игорь',
-                                    type: 'phone',
-                                    value: '0957678717'
-                                },
-                                {
-                                    label: 'Александр',
-                                    type: 'phone',
-                                    value: '0950153100'
-                                },
-                                {
-                                    label: 'e-mail',
-                                    type: 'e-mail',
-                                    value: 'CLL-GOTYE@mail.ru'
-                                }
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
-                elem: 'col',
                 mods: { position: 'left' },
                 content: [
                     {
                         block: 'sticker',
                         title: c.stickers.delivery.title,
+                        icon: c.stickers.delivery.icon,
                         content: c.stickers.delivery.content
                     },
                     {
                         block: 'sticker',
                         title: c.stickers.payment.title,
+                        icon: c.stickers.payment.icon,
                         content: c.stickers.payment.content
                     }
                 ]

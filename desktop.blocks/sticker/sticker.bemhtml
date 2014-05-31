@@ -2,7 +2,7 @@ block('sticker')(
     content()(function() {
         return [
             { elem: 'title', content: this.ctx.title },
-            { elem: 'body', content: applyNext() }
+            { elem: 'body', icon: this.ctx.icon, content: applyNext() }
         ]
     })
 )

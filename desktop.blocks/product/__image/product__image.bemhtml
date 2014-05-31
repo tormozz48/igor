@@ -1,0 +1,15 @@
+block('product').elem('image')(
+
+    def().match(!this.ctx.content)(function() {
+        return false;
+    }),
+
+    content()(function() {
+        return [
+            {
+                block: 'image',
+                url: this.ctx.content
+            }
+        ];
+    })
+)

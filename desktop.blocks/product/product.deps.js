@@ -2,7 +2,7 @@
     mustDeps: [],
     shouldDeps: [
         { elem: 'title' },
-        { elem: 'table' },
-        { block: 'table'}
+        { elem: 'image' },
+        { elem: 'table' }
     ]
 })

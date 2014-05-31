@@ -1,0 +1,15 @@
+block('sticker').elem('body')(
+
+    content().match(this.ctx.icon)(function() {
+        return [
+            {
+                block: 'icon',
+                url: this.ctx.icon
+            },
+            {
+                elem: 'body-text',
+                content: applyNext()
+            }
+        ]
+    })
+)

@@ -1,6 +1,7 @@
 block('header')(
 	content()(function() {
 		return [
+		    { elem: 'contacts'},
 			{ elem: 'title' }
 		];
 	})

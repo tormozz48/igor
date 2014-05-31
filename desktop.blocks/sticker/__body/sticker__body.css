@@ -3,3 +3,16 @@
     padding: 5px;
     background-color: #ffffff;
 }
+
+.sticker__body > .icon {
+    width: 30px;
+    height: 30px;
+
+    float: left;
+    margin-right: 15px;
+}
+
+.sticker__body > .sticker__body-text {
+    font-family: cursive;
+    font-size: 12px;
+}

@@ -17,10 +17,12 @@
             stickers: {
                 delivery: {
                     title: 'Доставка',
+                    icon: './icons/delivery.png',
                     content: 'Доставка по Симферополю и городам Крыма'
                 },
                 payment: {
                     title: 'Расчет',
+                    icon: './icons/payment.png',
                     content: 'Наличный и безналичный расчет с учетом НДС'
                 }
             },
@@ -76,7 +78,7 @@
                 },
                 {
                     name: 'Факс бумага',
-                    image: null,
+                    image: './images/fax_paper.jpg',
                     tables: [
                         {
                             title: 'Факс бумага',
@@ -116,7 +118,7 @@
                 },
                 {
                   name: 'Бумага перфорированая ЛПУ',
-                  image: null,
+                  image: './images/paper_lpu.jpg',
                   tables: [
                       {
                           title: 'Бумага перфорированная ЛПУ',
@@ -131,7 +133,7 @@
                 },
                 {
                     name: 'Бумага рулонная',
-                    image: null,
+                    image: './images/roll_paper.jpg',
                     tables: [
                         {
                             title: 'Бумага рулонная',
