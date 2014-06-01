@@ -1,0 +1,6 @@
+block('header').elem('subtitle')(
+
+    content()(function() {
+        return 'г. Симферополь'
+    })
+)
