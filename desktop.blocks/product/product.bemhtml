@@ -1,15 +1,22 @@
 block('product')(
 
     content().match(this.ctx.content.tables)(function() {
-        var index = this.ctx.index;
-        return this.ctx.content.tables.map(function(item) {
-            return [
-                {
-                    elem: 'table',
-                    content: item
-                }
-            ];
-        });
+        var index = this.ctx.index,
+            buf = this.ctx.content.tables.map(function(item) {
+                return [
+                    {
+                        elem: 'table',
+                        content: item
+                    }
+                ];
+            });
+
+            this.ctx.content.notation && buf.push({
+                elem: 'notation',
+                content: this.ctx.content.notation
+            });
+
+            return buf;
     }),
 
     content()(function(){

@@ -1,0 +1,6 @@
+block('product').elem('notation')(
+
+    content()(function() {
+        return '* ' + this.ctx.content;
+    })
+)

@@ -1,0 +1,4 @@
+.product__notation {
+    padding: 10px;
+    font-weight: bold;
+}

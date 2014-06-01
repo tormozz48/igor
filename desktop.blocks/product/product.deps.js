@@ -3,6 +3,7 @@
     shouldDeps: [
         { elem: 'title' },
         { elem: 'image' },
-        { elem: 'table' }
+        { elem: 'table' },
+        { elem: 'notation' }
     ]
 })
