@@ -13,6 +13,5 @@
 }
 
 .sticker__body > .sticker__body-text {
-    font-family: cursive;
-    font-size: 12px;
+    font-style: italic;
 }

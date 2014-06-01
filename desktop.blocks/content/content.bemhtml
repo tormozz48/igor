@@ -8,15 +8,11 @@ block('content')(
                 content: [
                     {
                         block: 'sticker',
-                        title: c.stickers.delivery.title,
-                        icon: c.stickers.delivery.icon,
-                        content: c.stickers.delivery.content
+                        content: c.stickers.delivery
                     },
                     {
                         block: 'sticker',
-                        title: c.stickers.payment.title,
-                        icon: c.stickers.payment.icon,
-                        content: c.stickers.payment.content
+                        content: c.stickers.payment
                     }
                 ]
             },

@@ -4,5 +4,5 @@
 
 .contacts__item_type_phone > .contacts__value {
     letter-spacing: 1px;
-    font-weight: bold;
+    font-style: italic;
 }
