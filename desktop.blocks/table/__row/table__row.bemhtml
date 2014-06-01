@@ -8,24 +8,13 @@ block('table').elem('row')(
 
     content()(function() {
         var c = this.ctx.content;
-        console.log(c);
-        return [
-            {
-                block: this.block,
-                elem: 'col',
-                content: c.name
-            },
-            {
-                block: this.block,
-                elem: 'col',
-                content: c.type
-            },
-            {
-                block: this.block,
-                elem: 'col',
-                content: c.amount
+        return Object.keys(c).map(function(key) {
+            return {
+               block: this.block,
+               elem: 'col',
+               content: c[key]
             }
-        ]
+        });
     })
 
 

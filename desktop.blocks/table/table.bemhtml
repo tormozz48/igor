@@ -7,9 +7,10 @@ block('table')(
     }),
 
     content()(function() {
-        return this.ctx.content.items.map(function(item) {
+        return this.ctx.content.items.map(function(item, index) {
             return {
                 elem: 'row',
+                elemMods: { head: index == 0 ? 'yes': '' },
                 content: item
             };
         });
@@ -20,11 +21,6 @@ block('table')(
             {
                 elem: 'caption',
                 content: this.ctx.content.title
-            },
-            {
-                elem: 'row',
-                elemMods: { head: 'yes' },
-                content: []
             },
             applyNext()
         ];
