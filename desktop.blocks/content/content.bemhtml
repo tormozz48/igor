@@ -13,6 +13,9 @@ block('content')(
                     {
                         block: 'sticker',
                         content: c.stickers.payment
+                    },
+                    {
+                        block: 'metrika'
                     }
                 ]
             },

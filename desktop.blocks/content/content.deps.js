@@ -3,6 +3,7 @@
     shouldDeps: [
         { elem: 'col', mods: { position: ['left', 'center']}},
         { block: 'sticker' },
-    	{ block: 'products' }
+    	{ block: 'products' },
+        { block: 'metrika' }
     ]
 })
