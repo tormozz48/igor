@@ -15,6 +15,13 @@ block('content')(
                         content: c.stickers.payment
                     },
                     {
+                        block: 'sticker',
+                        content: c.stickers.map
+                    },
+                    {
+                        block: 'share'
+                    },
+                    {
                         block: 'metrika'
                     }
                 ]

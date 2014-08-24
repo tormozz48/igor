@@ -32,6 +32,10 @@
                     title: 'Оплата',
                     icon: './icons/payment.png',
                     content: 'Наличный и безналичный расчет с НДС'
+                },
+                map: {
+                    title: 'Карта проезда',
+                    content: { block: 'map' }
                 }
             },
             products: {

@@ -18,5 +18,8 @@ exports.blocks = [
     },
     {
         "name": "content"
+    },
+    {
+        "name": "map"
     }
 ];

@@ -1,0 +1,5 @@
+block('map')(
+    content()(function() {
+        return '<script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=MvbqIvVTkcFba_nXB6iTDCrsBXl_0W5w&width=240&height=180"></script>';
+    })
+)
