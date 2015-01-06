@@ -1,4 +1,4 @@
 .contacts {
-    width: 570px;
+    width: 240px;
     text-align: left;
 }

@@ -1,6 +1,6 @@
 block('header').elem('subtitle')(
 
     content()(function() {
-        return 'г. Симферополь, ул. Артиллерийская 90'
+        return 'г. Симферополь, ул. Генерала Васильева 28'
     })
 )
