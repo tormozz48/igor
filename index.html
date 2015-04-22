@@ -20,25 +20,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Доставка</h3>
-                </div>
-                <div class="panel-body">
-                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                    Доставка по Симферополю и городам Крыма
-                </div>
-            </div>
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Оплата</h3>
-                </div>
-                <div class="panel-body">
-                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                    Наличный и безналичный расчет с НДС
-                </div>
-            </div>
-            <div class="panel panel-primary">
+            <div ng-controller="DeliveryController as c" ng-include="'./html/info-panel.htm'"></div>
+            <div ng-controller="PaymentController as c" ng-include="'./html/info-panel.htm'"></div>
+
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Карта проезда</h3>
                 </div>
@@ -48,7 +33,52 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div ng-controller="MainCtrl as c" ng-include="'./html/product-panel.htm'"></div>
+            <div class="row">
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/term_rolls.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/check_stripe.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/fax_paper.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/termo_label.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/paper_a4.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/paper_lpu.jpg" alt="...">
+                    </a>
+                </div>
+                <div class="col-xs-3 col-md-2">
+                    <a href="#" class="thumbnail">
+                        <img src="./images/roll_paper.jpg" alt="...">
+                    </a>
+                </div>
+            </div>
+
+            <div ng-controller="CashTapeController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="CheckTapeController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="FaxPaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="TermoLabelController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="OfficePaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="PaperLPUController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="RollPaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="PlotterRollsController as c" ng-include="'./html/product-panel.htm'"></div>
         </div>
     </div>
 </div>
