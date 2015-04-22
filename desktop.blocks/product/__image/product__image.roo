@@ -1,9 +1,0 @@
-.product__image {
-    float: right;
-    padding: 10px 10px 0 10px;
-}
-
-.product__image > .image {
-    border: 1px solid #add8e6;
-    border-radius: 5px;
-}

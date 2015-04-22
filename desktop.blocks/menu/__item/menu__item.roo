@@ -1,8 +1,0 @@
-.menu__item {
-    list-style-type: circle;
-}
-
-.menu__item > .link{
-    /*text-decoration: none;*/
-    color: #444;
-}

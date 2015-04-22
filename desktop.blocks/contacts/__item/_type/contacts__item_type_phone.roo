@@ -1,8 +1,0 @@
-.contacts__item_type_phone > .contacts__label {
-
-}
-
-.contacts__item_type_phone > .contacts__value {
-    letter-spacing: 1px;
-    font-style: italic;
-}

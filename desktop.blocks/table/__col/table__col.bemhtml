@@ -1,3 +1,0 @@
-block('table').elem('col')(
-    tag()('td')
-)

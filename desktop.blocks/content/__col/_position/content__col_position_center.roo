@@ -1,5 +1,0 @@
-.content__col_position_center {
-    margin-left: 260px;
-    /*margin-right: 265px;*/
-    min-width: 525px;
-}

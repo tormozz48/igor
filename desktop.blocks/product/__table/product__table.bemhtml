@@ -1,6 +1,0 @@
-block('product').elem('table').content()(function() {
-    return {
-        block: 'table',
-        content: this.ctx.content
-    };
-})

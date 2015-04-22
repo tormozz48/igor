@@ -2,14 +2,13 @@
   "author": "tormozz48",
   "name": "igor-bem",
   "email": "tormozz48@gmail.com",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "ignore": [
-    ".bem/cache",
     "node_modules",
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.1.0",
-    "bem-components": "v2"
+    "bootstrap": "3.3.4",
+    "angular": "1.3.15"
   }
 }
