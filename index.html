@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Gotey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body ng-cloak>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span><strong>Контакты</strong></span>
+            </button>
+            <div class="navbar-brand" href="#"> ООО "ГОТЭЙ" </div>
+            <p class="navbar-text">г. Симферополь, ул. Генерала Васильева 28</p>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                        Игорь: +7-978-756-81-11
+                    </p>
+                </div>
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                        Александр: +7-978-756-81-08
+                    </p>
+                </div>
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        e-mail: CLL-GOTEY@mail.ru
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <div ng-controller="DeliveryController as c" ng-include="'./html/info-panel.htm'"></div>
+            <div ng-controller="PaymentController as c" ng-include="'./html/info-panel.htm'"></div>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Карта проезда</h3>
+                </div>
+                <div class="panel-body">
+                    <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=XpkRxow79Whca5rB8zc_p_vwABiEn2N-&width=220&height=180"></script>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div ng-controller="MenuController as c" ng-include="'./html/product-thumbnail.htm'" onload="c.onLoad()"></div>
+
+            <div ng-controller="CashTapeController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="CheckTapeController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="FaxPaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="TermoLabelController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="OfficePaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="PaperLPUController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="RollPaperController as c" ng-include="'./html/product-panel.htm'"></div>
+            <div ng-controller="PlotterRollsController as c" ng-include="'./html/product-panel.htm'"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/index.min.js"></script>
+</body>
+</html>
