@@ -8,13 +8,13 @@
     <link href="./libs/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet">
     <link href="./css/index.css" rel="stylesheet">
 </head>
-<body>
+<body ng-cloak>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
-                <span>Контакты</span>
+                <span><strong>Контакты</strong></span>
             </button>
             <div class="navbar-brand" href="#"> ООО "ГОТЭЙ" </div>
             <p class="navbar-text">г. Симферополь, ул. Генерала Васильева 28</p>
@@ -59,18 +59,7 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div ng-controller="MenuController as c">
-                <div class="row" >
-                    <div class="col-xs-3 col-md-2" ng-repeat="item in c.items">
-                        <a href="#" scroll-to="#{{item.target}}" class="thumbnail" role="button"
-                           data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover"
-                           data-content="{{item.alt}}">
-                            <img ng-src="./images/{{item.target}}.jpg" alt="{{item.alt}}">
-                            <!--<span>{{item.alt}}</span>-->
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <div ng-controller="MenuController as c" ng-include="'./html/product-thumbnail.htm'" onload="c.onLoad()"></div>
 
             <div ng-controller="CashTapeController as c" ng-include="'./html/product-panel.htm'"></div>
             <div ng-controller="CheckTapeController as c" ng-include="'./html/product-panel.htm'"></div>

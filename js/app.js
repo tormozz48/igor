@@ -1,9 +1,4 @@
-$(function () {
-    $('[data-toggle="popover"]').popover()
-});
-
-(function() {
-
+(function () {
     var DeliveryController = function ($log) {
         $log.debug('Initialize delivery controller');
 
@@ -20,17 +15,23 @@ $(function () {
         this.body = 'Наличный и безналичный расчет с НДС';
     };
 
-    var MenuController = function () {
-        this.items = [
-            { target: 'cash-tape', alt: 'Кассовая (чековая) лента, термолента для банкоматов и платежных терминалов' },
-            { target: 'check-tape', alt: 'Чековая лента однослойная офсетная' },
-            { target: 'fax-paper',  alt: 'Факс бумага' },
-            { target: 'termo-label',  alt: 'Термоэтикетка' },
-            { target: 'office-paper',  alt: 'Бумага офисная А4 80г.' },
-            { target: 'paper-lpu',  alt: 'Бумага перфорированая ЛПУ' },
-            { target: 'roll-paper', alt: 'Бумага рулонная' },
-            { target: 'plotter-rolls', alt: 'Ролики для плоттера' }
-        ];
+    var MenuController = function ($log, $http) {
+        var _this = this,
+            url = './data/' + 'menu.json';
+
+        this.onLoad = function () {
+            $log.debug('Menu controller has been loaded');
+            $http.get(url)
+                .success(function(data, status) {
+                    _this.items = data;
+                    setTimeout(function () {
+                        $('[data-toggle="popover"]').popover();
+                    }, 300)
+                })
+                .error(function(data, status) {
+                    $log.error('failed: ' + url + ' status:' + status);
+                });
+        };
     };
 
     function getProductController (dataFile, columns) {
@@ -72,4 +73,3 @@ $(function () {
     application.controller('RollPaperController', getProductController('roll-paper'));
     application.controller('PlotterRollsController', getProductController('plotter-rolls'));
 })();
-
