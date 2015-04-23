@@ -8,7 +8,8 @@ var path = require('path'),
     concatCss = require('gulp-concat-css'),
     minifyCss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
-    notify = require('gulp-notify');
+    notify = require('gulp-notify'),
+    ghPages = require('gulp-gh-pages');
 
 function getBuildFolder() {
     return path.join(process.cwd(), './build');
@@ -114,3 +115,9 @@ gulp.task('html', function () {
 });
 
 gulp.task('build', ['data', 'images', 'fonts', 'css', 'js', 'partials', 'html']);
+
+gulp.task('ghPages', ['build'], function () {
+    return gulp.src("./build/**/*")
+        .pipe(ghPages())
+        .pipe(notify({ message: 'gh-pages task complete' }));
+});
