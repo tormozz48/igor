@@ -12,8 +12,34 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span>Контакты</span>
+            </button>
             <div class="navbar-brand" href="#"> ООО "ГОТЭЙ" </div>
             <p class="navbar-text">г. Симферополь, ул. Генерала Васильева 28</p>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav navbar-right">
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                        Игорь: +7-978-756-81-11
+                    </p>
+                </div>
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                        Александр: +7-978-756-81-08
+                    </p>
+                </div>
+                <div>
+                    <p class="navbar-text contact-row">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        e-mail: CLL-GOTEY@mail.ru
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
@@ -33,41 +59,16 @@
             </div>
         </div>
         <div class="col-md-9">
-            <div class="row">
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/term_rolls.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/check_stripe.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/fax_paper.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/termo_label.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/paper_a4.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/paper_lpu.jpg" alt="...">
-                    </a>
-                </div>
-                <div class="col-xs-3 col-md-2">
-                    <a href="#" class="thumbnail">
-                        <img src="./images/roll_paper.jpg" alt="...">
-                    </a>
+            <div ng-controller="MenuController as c">
+                <div class="row" >
+                    <div class="col-xs-3 col-md-2" ng-repeat="item in c.items">
+                        <a href="#" scroll-to="#{{item.target}}" class="thumbnail" role="button"
+                           data-container="body" data-toggle="popover" data-placement="bottom" data-trigger="hover"
+                           data-content="{{item.alt}}">
+                            <img ng-src="./images/{{item.target}}.jpg" alt="{{item.alt}}">
+                            <!--<span>{{item.alt}}</span>-->
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -83,7 +84,12 @@
     </div>
 </div>
 
+<script src="./libs/jquery/dist/jquery.js"></script>
+<script src="./libs/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./libs/bootstrap/js/tooltip.js"></script>
+<script src="./libs/bootstrap/js/popover.js"></script>
 <script src="./libs/angular/angular.js"></script>
+<script src="./libs/angular-scrollto/angular-scrollto.js"></script>
 <script src="./js/app.js"></script>
 </body>
 </html>
