@@ -11,3 +11,8 @@ body {
     margin-top: 3px;
     margin-bottom: 2px;
 }
+
+#yandex-map-container {
+    /*width: 200px;*/
+    height: 250px;
+}

@@ -7,12 +7,11 @@ var path = require('path'),
     htmlreplace = require('gulp-html-replace'),
     concatCss = require('gulp-concat-css'),
     minifyCss = require('gulp-minify-css'),
-    uglify = require('gulp-uglify'),
     notify = require('gulp-notify'),
     ghPages = require('gulp-gh-pages');
 
 function getBuildFolder() {
-    return path.join(process.cwd(), './build');
+    return './build';
 }
 
 function onError(error) {
@@ -20,19 +19,19 @@ function onError(error) {
 }
 
 gulp.task('cleanJs', function () {
-    return gulp.src('build/*.js')
+    return gulp.src(getBuildFolder() + '/*.js')
         .pipe(clean({ read: false }))
         .pipe(notify({ message: 'clean js task complete' }));
 });
 
 gulp.task('cleanCss', function () {
-    return gulp.src('build/*.css')
+    return gulp.src(getBuildFolder() + '/*.css')
         .pipe(clean({ read: false }))
         .pipe(notify({ message: 'clean css task complete' }));
 });
 
 gulp.task('clean', function () {
-    return gulp.src('build/*')
+    return gulp.src(getBuildFolder() + '/*')
         .pipe(clean({ read: false }));
 });
 
@@ -47,18 +46,17 @@ gulp.task('js', ['cleanJs'], function () {
         './js/app.js'
     ];
 
-    gulp.src(jsFiles)
+    return gulp.src(jsFiles)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
         .pipe(concat('index.min.js'))
         .pipe(sourcemaps.write())
-        //.pipe(uglify())
         .pipe(gulp.dest(getBuildFolder() + '/js'))
         .pipe(notify({ message: 'js task complete' }));
 });
 
 gulp.task('data', function () {
-    gulp
+    return gulp
         .src('./data/*.json')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/data'))
@@ -66,7 +64,7 @@ gulp.task('data', function () {
 });
 
 gulp.task('partials', function () {
-    gulp
+    return gulp
         .src('./html/*.htm')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/html'))
@@ -74,7 +72,7 @@ gulp.task('partials', function () {
 });
 
 gulp.task('images', function () {
-    gulp
+    return gulp
         .src('./images/*.{jpg,png}')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/images'))
@@ -82,7 +80,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function () {
-    gulp
+    return gulp
         .src('./libs/bootstrap/dist/fonts/*')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/fonts'))
@@ -96,7 +94,7 @@ gulp.task('css', ['cleanCss'], function () {
         './css/index.css'
     ];
 
-    gulp.src(cssFiles)
+    return gulp.src(cssFiles)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(concatCss('index.min.css', { rebaseUrls: false }))
         .pipe(minifyCss())
@@ -105,7 +103,7 @@ gulp.task('css', ['cleanCss'], function () {
 });
 
 gulp.task('html', function () {
-    gulp.src('index.html')
+    return gulp.src('index.html')
         .pipe(htmlreplace({
             'css': 'css/index.min.css',
             'js': 'js/index.min.js'
@@ -117,7 +115,7 @@ gulp.task('html', function () {
 gulp.task('build', ['data', 'images', 'fonts', 'css', 'js', 'partials', 'html']);
 
 gulp.task('ghPages', ['build'], function () {
-    return gulp.src("./build/**/*")
+    return gulp.src(getBuildFolder() + '/**/*')
         .pipe(ghPages())
         .pipe(notify({ message: 'gh-pages task complete' }));
 });
