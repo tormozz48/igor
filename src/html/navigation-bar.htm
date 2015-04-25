@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span><strong>{{main.navigation.contacts.title}}</strong></span>
+        </button>
+        <div class="navbar-brand" href="#">{{main.navigation.title}}</div>
+        <p class="navbar-text">{{main.navigation.address}}</p>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-right">
+            <div ng-repeat="item in main.navigation.contacts.items">
+                <p class="navbar-text contact-row">
+                    <span class="glyphicon" ng-class="item.icon" aria-hidden="true"></span>
+                    {{item.value}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

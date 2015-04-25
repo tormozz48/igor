@@ -15,40 +15,7 @@
 
 </head>
 <body ng-cloak ng-controller="MainController as main">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span><strong>Контакты</strong></span>
-            </button>
-            <div class="navbar-brand" href="#"> ООО "ГОТЭЙ" </div>
-            <p class="navbar-text">г. Симферополь, ул. Генерала Васильева 28</p>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="nav navbar-nav navbar-right">
-                <div>
-                    <p class="navbar-text contact-row">
-                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-                        Игорь: +7-978-756-81-11
-                    </p>
-                </div>
-                <div>
-                    <p class="navbar-text contact-row">
-                        <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
-                        Александр: +7-978-756-81-08
-                    </p>
-                </div>
-                <div>
-                    <p class="navbar-text contact-row">
-                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                        e-mail: CLL-GOTEY@mail.ru
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
+<nav class="navbar navbar-default navbar-fixed-top" ng-include="'./html/navigation-bar.htm'"></nav>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-3">

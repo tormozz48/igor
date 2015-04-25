@@ -35,27 +35,19 @@
             };
         },
 
-        MainController = function () {
+        MainController = function ($log, $http) {
             this.productControllers = [];
-            this.panels = [
-                {
-                    title: 'Доставка',
-                    icon: 'glyphicon-globe',
-                    body: 'Доставка по Симферополю и городам Крыма'
-                },
-                {
-                    title: 'Оплата',
-                    icon: 'glyphicon-shopping-cart',
-                    body: 'Наличный и безналичный расчет с НДС'
-                },
-                {
-                    title: 'Карта проезда',
-                    map: {
-                        center: [0, 0],
-                        zoom: 20
-                    }
-                }
-            ];
+            var _this = this,
+                url = './data/' + 'main.json';
+
+            $http.get(url)
+                .success(function(data, status) {
+                    _this.navigation = data.navigation;
+                    _this.panels = data.panels;
+                })
+                .error(function(data, status) {
+                    $log.error('failed: ' + url + ' status:' + status);
+                });
 
             this.onPanelsLoad = function (item) {
                 if(item.map) {
