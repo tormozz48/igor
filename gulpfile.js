@@ -14,6 +14,10 @@ function getBuildFolder() {
     return './build';
 }
 
+function getSrcFolder() {
+    return './src';
+}
+
 function onError(error) {
     console.error(error);
 }
@@ -43,7 +47,7 @@ gulp.task('js', ['cleanJs'], function () {
         './libs/bootstrap/js/popover.js',
         './libs/angular/angular.js',
         './libs/angular-scrollto/angular-scrollto.js',
-        './js/app.js'
+        getSrcFolder() + '/js/app.js'
     ];
 
     return gulp.src(jsFiles)
@@ -57,7 +61,7 @@ gulp.task('js', ['cleanJs'], function () {
 
 gulp.task('data', function () {
     return gulp
-        .src('./data/*.json')
+        .src(getSrcFolder() + '/data/*.json')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/data'))
         .pipe(notify({ message: 'data task complete' }));
@@ -65,7 +69,7 @@ gulp.task('data', function () {
 
 gulp.task('partials', function () {
     return gulp
-        .src('./html/*.htm')
+        .src(getSrcFolder() + '/html/*.htm')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/html'))
         .pipe(notify({ message: 'partials task complete' }));
@@ -73,7 +77,7 @@ gulp.task('partials', function () {
 
 gulp.task('images', function () {
     return gulp
-        .src('./images/*.{jpg,png}')
+        .src(getSrcFolder() + '/images/*.{jpg,png}')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/images'))
         .pipe(notify({ message: 'images task complete' }));
@@ -91,7 +95,7 @@ gulp.task('css', ['cleanCss'], function () {
     var cssFiles = [
         './libs/bootstrap/dist/css/bootstrap.css',
         './libs/bootstrap/dist/css/bootstrap-theme.css',
-        './css/index.css'
+        getSrcFolder() + '/css/index.css'
     ];
 
     return gulp.src(cssFiles)
@@ -103,7 +107,7 @@ gulp.task('css', ['cleanCss'], function () {
 });
 
 gulp.task('html', function () {
-    return gulp.src('index.html')
+    return gulp.src(getSrcFolder() + '/index.html')
         .pipe(htmlreplace({
             'css': 'css/index.min.css',
             'js': 'js/index.min.js'
