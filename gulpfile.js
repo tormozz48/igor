@@ -77,7 +77,7 @@ gulp.task('partials', function () {
 
 gulp.task('images', function () {
     return gulp
-        .src(getSrcFolder() + '/images/*.{jpg,png}')
+        .src(getSrcFolder() + '/images/*.{jpg,png,ico}')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/images'))
         .pipe(notify({ message: 'images task complete' }));
@@ -89,6 +89,14 @@ gulp.task('fonts', function () {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(gulp.dest(getBuildFolder() + '/fonts'))
         .pipe(notify({ message: 'fonts task complete' }));
+});
+
+gulp.task('search', function () {
+    return gulp
+        .src(getSrcFolder() + '/search/*')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(gulp.dest(getBuildFolder()))
+        .pipe(notify({ message: 'search task complete' }));
 });
 
 gulp.task('css', ['cleanCss'], function () {
@@ -116,7 +124,7 @@ gulp.task('html', function () {
         .pipe(notify({ message: 'html task complete' }));
 });
 
-gulp.task('build', ['data', 'images', 'fonts', 'css', 'js', 'partials', 'html']);
+gulp.task('build', ['data', 'images', 'fonts', 'css', 'js', 'partials', 'search', 'html']);
 
 gulp.task('ghPages', ['build'], function () {
     return gulp.src(getBuildFolder() + '/**/*')
