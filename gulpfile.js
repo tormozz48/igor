@@ -47,7 +47,7 @@ gulp.task('js', ['cleanJs'], function () {
         './libs/bootstrap/js/popover.js',
         './libs/angular/angular.js',
         './libs/angular-scrollto/angular-scrollto.js',
-        getSrcFolder() + '/js/app.js'
+        getSrcFolder() + '/js/*'
     ];
 
     return gulp.src(jsFiles)

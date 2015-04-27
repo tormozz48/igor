@@ -1,5 +1,6 @@
 body {
     padding-top: 80px;
+    padding-bottom: 45px;
     background: url("../images/handmadepaper.png") repeat;
 }
 
@@ -17,3 +18,19 @@ body {
     height: 250px;
 }
 
+.footer {
+    height: 35px;
+    min-height: 35px;
+    padding-top: 2px;
+}
+
+.yashare-auto-init {
+    display: inline-block;
+    width: 200px;
+}
+
+.copyright {
+    font-size: 9px;
+    padding-right: 7px;
+    padding-top: 10px;
+}
