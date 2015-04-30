@@ -16,15 +16,5 @@ pids
 node_modules
 npm-debug.log
 libs
-
-.bem/cache
-*.bundles/*/*
-!desktop.bundles/*/images
-!desktop.bundles/*/icons
-!desktop.bundles/*/*.bemdecl.js
-!desktop.bundles/*/*.bemjson.js
-!touch-pad.bundles/*/*.bemdecl.js
-!touch-pad.bundles/*/*.bemjson.js
-!touch-phone.bundles/*/*.bemdecl.js
-!touch-phone.bundles/*/*.bemjson.js
-
+build
+.publish

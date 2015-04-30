@@ -1,5 +1,0 @@
-.content__col_position_left {
-    position: fixed;
-    width: 250px;
-    float: left;
-}

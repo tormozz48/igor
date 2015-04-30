@@ -1,24 +1,39 @@
 {
   "author": "tormozz48",
-  "name": "igor-bem",
+  "name": "gotey",
   "email": "tormozz48@gmail.com",
   "version": "0.0.0",
   "engines": {
     "node": ">=0.10"
   },
-  "dependencies": {
-    "bem-environ": "1.4.0",
-    "roole": "0.9.0",
-    "bem-tools-autoprefixer": "0.0.3"
+  "author": "Andrey Kuznetsov <andrey.kuznetsov48@yandex.ua> (http://github.com/tormozz48)",
+  "maintainers": [
+    "Andrey Kuznetsov <andrey.kuznetsov48@yandex.ua> (http://github.com/tormozz48)"
+  ],
+  "contributors": [
+    "Andrey Kuznetsov <andrey.kuznetsov48@yandex.ua> (http://github.com/tormozz48)"
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
   },
+  "dependencies": {},
   "devDependencies": {
-    "bem": "0.8.0",
-    "bower": "1.2.8",
-    "bower-npm-install": "0.5.4"
+    "bower": "1.4.x",
+    "gulp": "^3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.5.2",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-html-replace": "^1.4.5",
+    "gulp-minify-css": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
   },
   "scripts": {
-    "postinstall": "bower-npm-install --non-interactive",
-    "deps": "bower-npm-install --non-interactive"
+    "postinstall": "bower i --non-interactive",
+    "build": "gulp build",
+    "gh-pages": "gulp ghPages"
   },
   "private": true
 }

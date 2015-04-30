@@ -1,0 +1,38 @@
+<div class="panel panel-info" id="{{ c.id }}">
+    <div class="panel-heading">
+        <span class="panel-title">{{ c.title }}</span>
+    </div>
+
+    <table class="table table-hover table-bordered table-condensed">
+        <thead>
+        <th class="info" ng-show="c.columns[0]">
+            <a href="#" ng-click="sortField = 'name'; sortDirection=!sortDirection">{{ c.columns[0] }}</a>
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true"
+                  ng-show="sortField === 'name' && sortDirection == true"></span>
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"
+                  ng-show="sortField === 'name' && sortDirection == false"></span>
+        </th>
+        <th class="info" ng-show="c.columns[1]">
+            <a href="#" ng-click="sortField = 'type'; sortDirection=!sortDirection">{{ c.columns[1] }}</a>
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true"
+                  ng-show="sortField === 'type' && sortDirection == true"></span>
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"
+                  ng-show="sortField === 'type' && sortDirection == false"></span>
+        </th>
+        <th class="info" ng-show="c.columns[2]">
+            <a href="#" ng-click="sortField = 'amount'; sortDirection=!sortDirection">{{ c.columns[2] }}</a>
+            <span class="glyphicon glyphicon-menu-up" aria-hidden="true"
+                  ng-show="sortField === 'amount' && sortDirection == true"></span>
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"
+                  ng-show="sortField === 'amount' && sortDirection == false"></span>
+        </th>
+        </thead>
+        <tbody ng-repeat="item in c.items | orderBy:sortField:sortDirection">
+        <tr>
+            <td ng-show="item.name">{{ item.name }}</td>
+            <td ng-show="item.type">{{ item.type }}</td>
+            <td ng-show="item.amount">{{ item.amount }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

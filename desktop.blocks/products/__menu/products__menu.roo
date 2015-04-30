@@ -1,9 +1,0 @@
-.products__menu {
-
-    margin-top: 0;
-    margin-bottom: 10px;
-    padding: 10px;
-
-    border: 1px solid #008ace;
-    box-shadow: 5px 5px 5px #ddd;
-}

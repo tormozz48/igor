@@ -1,7 +1,0 @@
-block('header').elem('title')(
-    tag()('span'),
-
-	content()(function() {
-		return 'ООО "ГОТЭЙ"';
-	})	
-)
